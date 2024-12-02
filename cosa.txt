@@ -1,0 +1,6 @@
+1. variables
+2. diseño html actualizado
+3. scss para layout y componentes. header, footer y main en scss. cards tmb, junto a globals.scss y main.scss
+4. vite.config.js
+5. main.scss
+6. optimizar main.js
