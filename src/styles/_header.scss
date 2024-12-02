@@ -30,10 +30,6 @@
       font-family: variables.$font-family-sans;
       text-decoration: none;
       transition: color 0.3s ease;
-
-      &:hover {
-        color: variables.$blue-medium; // Cambia el color al pasar el ratón
-      }
     }
   }
 
@@ -62,49 +58,6 @@
   }
 }
 
-// Carrusel de imágenes
-.carousel {
-  position: relative;
-  width: variables.$carousel-width;
-  max-width: 100%;
-  height: variables.$carousel-height;
-  overflow: hidden;
-
-  .carousel-images {
-    display: flex;
-    transition: transform variables.$transition-time ease-in-out;
-
-    img {
-      width: 100%;
-      height: auto;
-    }
-  }
-
-  .arrow {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: variables.$arrow-color;
-    font-size: 2rem;
-    padding: 0.5rem;
-    cursor: pointer;
-    border: none;
-    z-index: 1;
-
-    &:hover {
-      background-color: variables.$arrow-hover-color;
-    }
-  }
-
-  .left-arrow {
-    left: 10px;
-  }
-
-  .right-arrow {
-    right: 10px;
-  }
-}
 
 // Media queries para la responsividad
 
