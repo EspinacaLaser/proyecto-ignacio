@@ -1,82 +1,119 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
+  <head>
+    <!-- Meta tags -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Proyecto</title>
-    <link rel="stylesheet" href="/styles/main.css">
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-  <script type="module" crossorigin src="/assets/index-3e5f6e42.js"></script>
-  <link rel="stylesheet" href="/assets/index-3a5f933b.css">
-</head>
-<body>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Rap Nation</title>
   
-<header class="header-top">
-  <div class="logo">
-    <a href="index.html">
-      <img src="/assets/logo_gp-2724c50f.jpg" alt="Logo">
-    </a>
-  </div>
-  <nav class="nav-links">
-    <a href="index.html" class="nav-link">Inicio</a>
-    <a href="artists.html" class="nav-link">Artistas</a>
-  </nav>
-  <button class="user-btn">
-    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAACxAAAAsQHGLUmNAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAAg9JREFUSIm91U1vjVEQB/BfbapqgUQoGyy0pHQl8dLWyycgBAs2lC1J1bdgKz4BCZ+A0qhIuiBBI1SvEom3eosSbSV6Lc7cePr03t5HhH9yMs+d+z8zc2bmzOEfo6Egrx0dWBG/3+E+Hv2N8yb0oYRyjVVCLxb+qfHteBlGrqEHrWiO1YYTuB6cF9ha1PhBTGEE3QX4O/EUkzhQJPIp3MLSohEFdzCc1DxJk5SWkSrGW3Ae92Kdw8ocZxlG8RyN1Rz0SfnMp6UNbzGNmxiI7zdSXbLYFTZ6qzkoSQXNYwgfsCmj24yPuFOF3y/VZBbaw3NPTr9unogqJ16T058M/UZYkIkIbufIlYs1JyI8CZmvxWDIjqyDlpCvc+RnmEFnFQfd+BmcLF6FXJV1UA45kyOP4ypO40jwF+AoTuEK3uf2lHMSHA7F+iqRtuBz/P8lVhmfzE0PqbPKOJQ9wXDIrhx5j9RFS6RUDMQak+7KEHbn9lRsDOf0RqTZUsE+/MADtWvwMDh7M/p+vxtgFs5IR9uBtZiQOqK5GjmwWOq8Caldu8xz0RqlNIziMr6KTqiD1fiGS9JlLakxKkjDbjKiuFDAeAUXY893bKtH3i/NmhEpXfXQGdzp2FsIXVKnlKWiHTP7wWnFcdwIzpi5HVgXi3BWGr+1nswxaSY11TJS5NFvwAZswfLQjeMuHsvd2P+OX7Lkju/e/WDPAAAAAElFTkSuQmCC" alt="User Icon" class="user-icon"> Usuario
-  </button>
-</header>
+    <!-- Fuentes de Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+  
+    <!-- Importar el archivo SCSS principal -->
+    <link rel="stylesheet" href="/src/styles/layout/main.scss" />
 
-<main class="main-content">
-  <div class="card">
-    <img src="/assets/img_card_1-a62c0281.jpg" alt="Imagen 1" class="card-img">
-    <h2 class="card-title">Presentación de Leyendas Legales</h2>
-    <div class="card-body">
-      <p>Texto de la card 1.</p>
-      <a href="#" class="cta-button">Comprar disco</a>
+  
+    <!-- Otros archivos SCSS específicos -->
+    <link rel="stylesheet" href="/src/styles/layout/header.scss">
+    <link rel="stylesheet" href="/src/styles/layout/footer.scss">
+  </head>
+  
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="container">
+      <div class="logo">
+        <img src="/src/assets/logos/logo_gp.jpg" alt="Logo Rap Nation">
+      </div>
+      <nav class="nav">
+        <ul>
+          <li><a href="#">Inicio</a></li>
+          <li><a href="#">Tienda</a></li>
+          <li><a href="#">Registro</a></li>
+        </ul>
+      </nav>
+      <div class="user-button">
+        <button>Mi cuenta</button>
+      </div>
     </div>
-  </div>
-  <div class="card">
-    <img src="/assets/img_card_2-884f22a0.jpg" alt="Imagen 2" class="card-img">
-    <h2 class="card-title">Título Card 2</h2>
-    <div class="card-body">
-      <p>Texto de la card 2.</p>
-      <a href="#" class="cta-button">Próximamente!</a>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main class="main-content">
+    <div class="container">
+      <div class="card">
+        <img src="/src/assets/cards/img_card_1.jpg" alt="Imagen 1">
+        <h2>Show Hermanos Herméticos</h2>
+        <p>Aarón Baliti, Supra Jordán y Dj Volo harán un fantástico concierto presentando su disco debut "Leyendas Legales"
+          en la sala STAFF. Además, habrá dj set de científico (perros callejeros) y hoodlove (guante blanco). No te lo pierdas!
+        </p>
+        <button class="cta-button">Comprar</button>
+      </div>
+      <div class="card">
+        <img src="/src/assets/cards/img_card_2.jpg" alt="Imagen 2">
+        <h2>Sr Rojo presenta álbum</h2>
+        <p>El mc madrileño nos tiene acostumbrados a sacar pocos trabajos pero sustanciosos a la vez. Esta vez aterriza con "Madrid Aprieta"
+          , con colaboraciones de hermanos herméticos, chirie vegas y muchos más. ¡Escúchalo ahora!
+        </p>
+        <button class="cta-button">Escuchar</button>
+      </div>
+      <div class="card">
+        <img src="/src/assets/cards/img_card_3.jpg" alt="Imagen 3">
+        <h2>Chirie Vegas lanza vinilo de "Shadows"</h2>
+        <p>El cabecilla de gamberros pro nos ha deleitado una vez más con la edición física de su último disco. La mayoría de las ventas irán
+          destinadas a la reconstrucción de la sala Clamores, devastada por el incendio de la semana pasada.
+        </p>
+        <button class="cta-button">Apoyar</button>
+      </div>
+      <div class="card">
+        <img src="/src/assets/cards/img_card_4.jpg" alt="Imagen 4">
+        <h2>¿La nueva cara del rap?</h2>
+        <p>Desde Piedralaves, Jarfaiter viene pisando fuerte. Sus líricas llenas de sátira y crítica social no han dejado indiferente a nadie. Además,
+          ¡se rumorea que está trabajando en un proyecto conjunto con Cecilio G! Suscríbete a nuestro boletín para estar a la última de las nuevas promesas.
+        </p>
+        <button class="cta-button">Suscribirse</button>
+      </div>
+      <div class="card">
+        <img src="/src/assets/cards/img_card_5.jpg" alt="Imagen 5">
+        <h2>Costa hace sold-out con "Chocolate"</h2>
+        <p>Otra de las caras más conocidas del rap urbano madrileño es la de Costa (o costagamberro). Y no es para menos, porque hace tan solo 24 horas
+          comunicó en redes sociales que hizo sold-out con el merch de cd's de su disco "Chocolate". ¡Una auténtica locura!
+        </p>
+        <button class="cta-button">Seguir en Instagramn</button>
+      </div>
+      <div class="card">
+        <img src="/src/assets/cards/img_card_6.jpg" alt="Imagen 6">
+        <h2>Gamberros Pro son portada de revista</h2>
+        <p>¡Has leido bien! Chirie Vegas, Costa y Romo son portada de la última edición de la revista hip-hop life, donde nos cuentan sus mayores inquietudes
+          y secretos sobre su vida: drogas, mujeres, shows, dinero, festivales. Esto y mucho más en la nueva edición 17 de hip-hop life.
+        </p>
+        <button class="cta-button">Más información</button>
+      </div>
     </div>
-  </div>
-  <div class="card">
-    <img src="/assets/img_card_3-d2e5f005.jpg" alt="Imagen 2" class="card-img">
-    <h2 class="card-title">Título Card 2</h2>
-    <div class="card-body">
-      <p>Texto de la card 2.</p>
-      <a href="#" class="cta-button">Llamada a la acción</a>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="privacy-policy">
+        <p>Política de privacidad</p>
+      </div>
+      <div class="nav-links">
+        <ul>
+          <li><a href="#">Sobre Nosotros</a></li>
+          <li><a href="#">Términos y Condiciones</a></li>
+          <li><a href="#">Contacto</a></li>
+        </ul>
+      </div>
+      <div class="social-media">
+        <a href="#"><img src="/src/assets/icons/fb.png" alt="Facebook"></a>
+        <a href="#"><img src="/src/assets/icons/ig.png" alt="Instagram"></a>
+        <a href="#"><img src="/src/assets/icons/gmail.png" alt="Gmail"></a>
+      </div>
     </div>
-  </div>
-  <div class="card">
-    <img src="/assets/img_card_4-08c7ec21.jpg" alt="Imagen 2" class="card-img">
-    <h2 class="card-title">Título Card 2</h2>
-    <div class="card-body">
-      <p>Texto de la card 2.</p>
-      <a href="#" class="cta-button">Llamada a la acción</a>
-    </div>
-  </div>
-  <div class="card">
-    <img src="/assets/img_card_5-693780ac.jpg" alt="Imagen 2" class="card-img">
-    <h2 class="card-title">Título Card 2</h2>
-    <div class="card-body">
-      <p>Texto de la card 2.</p>
-      <a href="#" class="cta-button">Llamada a la acción</a>
-    </div>
-  </div>
-  <div class="card">
-    <img src="/assets/img_card_6-68bf861d.jpg" alt="Imagen 2" class="card-img">
-    <h2 class="card-title">Título Card 2</h2>
-    <div class="card-body">
-      <p>Texto de la card 2.</p>
-      <a href="#" class="cta-button">Llamada a la acción</a>
-    </div>
-  </div>
-</main>
-    <footer class="footer">
-    </footer>
+  </footer>
+
 </body>
 </html>

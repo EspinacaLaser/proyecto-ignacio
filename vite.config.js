@@ -1,18 +1,36 @@
 import { defineConfig } from "vite";
-import { resolve } from "path";
+import { resolve, dirname } from "path";
+import { fileURLToPath } from "url";
+
+// Configuración para __dirname
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 
 export default defineConfig({
-  root: "./src", // Cambia la raíz del proyecto a "src"
+  root: "./src", // Raíz del proyecto
   build: {
-    outDir: "../docs", // Directorio de salida para GitHub Pages
+    outDir: "../docs", // Carpeta de salida
+    emptyOutDir: true, // Vaciar docs antes de construir
     rollupOptions: {
       input: {
         main: resolve(__dirname, "./src/index.html"), // Página principal
-        about: resolve(__dirname, "./src/about.html"), // Otra página
-        contact: resolve(__dirname, "./src/contact.html"), // Otra página
-        // Añade más entradas si es necesario
       },
     },
   },
-  base: "./", // Usar rutas relativas para GitHub Pages
+  resolve: {
+    alias: {
+      "@": resolve(__dirname, "./src"), // Alias para simplificar rutas
+    },
+  },
+  css: {
+    preprocessorOptions: {
+      scss: {
+        additionalData: `
+          @import "@/styles/base/variables.scss";
+          @import "@/styles/base/mixins.scss";
+        `,
+      },
+    },
+  },
+  base: "./",
 });
