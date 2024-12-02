@@ -5,5 +5,5 @@ export default defineConfig({
   build: {
     outDir: '../docs',  // Carpeta de salida
   },
-  base: '/nombre-repo/',  // Cambia "nombre-repo" al nombre real de tu repositorio
+  base: 'proyecto-ignacio',  // Cambia "nombre-repo" al nombre real de tu repositorio
 });
