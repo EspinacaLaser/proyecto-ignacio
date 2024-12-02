@@ -1,9 +1,8 @@
-import { defineConfig } from 'vite';
+import { defineConfig } from "vite";
 
 export default defineConfig({
-  root: './src',  // Carpeta de origen
+  root: "./src", // Cambia la raíz del proyecto a "src"
   build: {
-    outDir: '../docs',  // Carpeta de salida
+    outDir: "../docs", // Los archivos construidos irán a la carpeta "docs"
   },
-  base: 'proyecto-ignacio',  // Cambia "nombre-repo" al nombre real de tu repositorio
 });
