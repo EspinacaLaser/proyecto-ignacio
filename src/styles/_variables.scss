@@ -50,15 +50,15 @@ $font-weight-h3: 600;
 $line-height-h3: 1.4;
 
 //**Párrafos**
-$font-size-p-lg: 1.125rem; 
+$font-size-p-lg: 1.125rem;
 $font-weight-p-lg: 400;
 $line-height-p-lg: 1.6;
 
-$font-size-p-md: 1rem; 
+$font-size-p-md: 1rem;
 $font-weight-p-md: 400;
 $line-height-p-md: 1.5;
 
-$font-size-p-sm: 0.875rem; 
+$font-size-p-sm: 0.875rem;
 $font-weight-p-sm: 400;
 $line-height-p-sm: 1.4;
 
@@ -76,20 +76,10 @@ $font-family-sans: 'Roboto', sans-serif;
 $user-icon-size: 1.2rem;
 $border-radius-logo: 10px;
 
-//________________________________________________________________________________________________//
-
 //**(Nuevas variables para el carrusel)**
-
-// Ancho y altura del carrusel
-$carousel-width: 100%; // El ancho del carrusel (100% para ocupar todo el contenedor)
-$carousel-height: 300px; // La altura del carrusel
-
-// Tamaño de las flechas
-$arrow-size: 40px; // Tamaño de las flechas de navegación
-
-// Tiempo de transición para el movimiento de las diapositivas
-$transition-time: 0.3s; // Duración de la animación para mover las imágenes
-
-// Colores para las flechas
-$arrow-color: #fff; // Color de las flechas de navegación
-$arrow-hover-color: #ccc; // Color de las flechas cuando se pasa el mouse por encima
+$carousel-width: 100%;
+$carousel-height: 300px;
+$arrow-size: 40px;
+$transition-time: 0.3s;
+$arrow-color: #fff;
+$arrow-hover-color: #ccc;
