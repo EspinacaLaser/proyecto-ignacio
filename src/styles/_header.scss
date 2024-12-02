@@ -122,11 +122,6 @@
   .user-btn {
     padding: 0.4rem 0.8rem;
     font-size: variables.$font-size-p-sm; // Tamaño de fuente más pequeño en móviles
-
-    .user-icon {
-      width: calc(#{$variables.$user-icon-size} - 0.2rem); // Reducido para móviles
-      height: calc(#{$variables.$user-icon-size} - 0.2rem);
-    }
   }
 }
 
