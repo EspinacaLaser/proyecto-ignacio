@@ -1,0 +1,90 @@
+@use './variables' as *;
+
+/* Layout principal de la página */
+.page {
+    display: grid;
+    grid-template-columns: 1fr; /* Una sola columna por defecto */
+    grid-template-rows: auto 1fr auto; /* Header, main content, footer */
+    grid-template-areas:
+      "header"
+      "main"
+      "footer";
+  }
+  
+  /* Header: 3 columnas */
+  .header {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr; /* Logo, Navegación, Botón */
+    grid-template-areas: "logo nav user";
+    padding: 20px;
+    background-color: $purple-medium; /* Color del header */
+  }
+  
+  /* Contenido principal: 3 columnas para desktop */
+  .main-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas */
+    gap: 20px; /* Espacio entre las cards */
+    padding: 20px;
+  }
+  
+  /* Footer: 3 columnas */
+  .footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /* 3 columnas */
+    grid-template-areas: "policies nav social";
+    gap: 20px;
+    padding: 20px;
+    background-color: $gray-light;
+  }
+  
+  /* Responsividad para tablets y móviles */
+  
+  /* Para tabletas (pantallas de hasta 768px) */
+  @media (max-width: 768px) {
+    .page {
+      grid-template-columns: 1fr; /* Una sola columna en general */
+    }
+  
+    .header {
+      grid-template-columns: 1fr 2fr; /* Logo y navegación en fila, botón de usuario en fila aparte */
+      grid-template-areas:
+        "logo nav"
+        "user user";
+    }
+  
+    .main-content {
+      grid-template-columns: 1fr 1fr; /* 2 columnas en tablet */
+    }
+  
+    .footer {
+      grid-template-columns: 1fr 1fr; /* 2 columnas en footer */
+      grid-template-areas:
+        "policies nav"
+        "social social";
+    }
+  }
+  
+  /* Para móviles (pantallas de hasta 480px) */
+  @media (max-width: 480px) {
+    .header {
+      grid-template-columns: 1fr; /* Todo en una sola columna */
+      grid-template-areas:
+        "logo"
+        "nav"
+        "user";
+    }
+  
+    .main-content {
+      grid-template-columns: 1fr; /* Una sola columna de cards en móvil */
+    }
+  
+    .footer {
+      grid-template-columns: 1fr; /* Una sola columna en footer */
+      grid-template-areas:
+        "policies"
+        "nav"
+        "social";
+    }
+  }
+  
