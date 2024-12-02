@@ -4,24 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mi Proyecto</title>
-    <link rel="stylesheet" href="./styles/main.scss">
+    <link rel="stylesheet" href="styles/main.scss">
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header class="header-top">
-    <div class="logo">
-      <a href="index.html">
-        <img src="assets/img/logo_gp.jpg" alt="Logo Rap Nation">
-      </a>
-    </div>
-    <nav class="nav-links">
-      <a href="index.html" class="nav-link">Inicio</a>
-      <a href="artists.html" class="nav-link">Artistas</a>
-    </nav>
-    <button class="user-btn">
-      <img src="assets/icons/avatar.png" alt="User Icon" class="user-icon"> Usuario
-    </button>
-  </header>
+  <!-- header.html o index.html (dependiendo de tu estructura) -->
+<header class="header-top">
+  <div class="logo">
+    <a href="index.html">
+      <img src="/assets/logo_gp-2724c50f.jpg" alt="Logo Rap Nation">
+    </a>
+  </div>
+  <nav class="nav-links">
+    <a href="index.html" class="nav-link">Inicio</a>
+    <a href="artists.html" class="nav-link">Artistas</a>
+  </nav>
+  <button class="user-btn">
+    <img src="data:image/png;base64,..." alt="User Icon" class="user-icon"> Usuario
+  </button>
+</header>
+
+<!-- Carrusel -->
+<div class="carousel-container">
+  <div class="carousel-slide">
+    <img src="src/assets/img/imagen1.jpg" class="carousel-image" alt="Imagen 1">
+    <img src="src/assets/img/imagen2.jpg" class="carousel-image" alt="Imagen 2">
+    <img src="src/assets/img/imagen3.jpg" class="carousel-image" alt="Imagen 3">
+  </div>
+  <button class="arrow arrow-left" id="prevBtn">&#10094;</button>
+  <button class="arrow arrow-right" id="nextBtn">&#10095;</button>
+</div>
+
   
       
       

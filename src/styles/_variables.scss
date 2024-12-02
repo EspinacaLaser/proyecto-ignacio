@@ -72,6 +72,24 @@ $font-family-sans: 'Roboto', sans-serif;
 
 //________________________________________________________________________________________________//
 
-//Tamaños
+// Tamaños
 $user-icon-size: 1.2rem;
 $border-radius-logo: 10px;
+
+//________________________________________________________________________________________________//
+
+//**(Nuevas variables para el carrusel)**
+
+// Ancho y altura del carrusel
+$carousel-width: 100%; // El ancho del carrusel (100% para ocupar todo el contenedor)
+$carousel-height: 300px; // La altura del carrusel
+
+// Tamaño de las flechas
+$arrow-size: 40px; // Tamaño de las flechas de navegación
+
+// Tiempo de transición para el movimiento de las diapositivas
+$transition-time: 0.3s; // Duración de la animación para mover las imágenes
+
+// Colores para las flechas
+$arrow-color: #fff; // Color de las flechas de navegación
+$arrow-hover-color: #ccc; // Color de las flechas cuando se pasa el mouse por encima
