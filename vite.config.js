@@ -1,8 +1,15 @@
-import { defineConfig } from "vite";
+import { defineConfig } from 'vite';
 
 export default defineConfig({
-  root: "./src", // Cambia la raíz del proyecto a "src"
+  css: {
+    preprocessorOptions: {
+      scss: {
+        additionalData: `@use './src/styles/_variables.scss' as *;`, // Asegúrate de usar la ruta absoluta
+      },
+    },
+  },
+  root: "./src",
   build: {
-    outDir: "../docs", // Los archivos construidos irán a la carpeta "docs"
+    outDir: "../docs",
   },
 });

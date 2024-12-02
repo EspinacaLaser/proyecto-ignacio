@@ -1,7 +1,5 @@
 /* main.scss */
-
-@use './variables' as *;
-
+@use "variables.scss" as *;
 .main-content {
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* 3 columnas por defecto */
