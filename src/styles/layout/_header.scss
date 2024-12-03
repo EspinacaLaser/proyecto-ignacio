@@ -1,0 +1,130 @@
+// ** Header SCSS **
+
+// Asegúrate de importar las variables y fuentes antes de cualquier estilo
+@use "/src/styles/base/variables" as *; // Solo lo necesario, evita usar `main.scss`
+
+// Estilos generales del header
+header {
+  background-color: $purple-normal; // Color de fondo del header (morado)
+  padding: $spacing-md, $spacing-lg;  // Padding según las variables
+
+  .logo {
+    display: block;
+    max-width: 120px;  // Tamaño del logo
+    height: auto;
+    border-radius: $border-radius-md;  // Border radius para el logo
+  }
+
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+
+    .nav-links {
+      display: flex;
+      gap: $spacing-md;
+
+      a {
+        text-decoration: none;
+        color: $white;  // Color del enlace
+        font-family: $font-primary;
+        font-size: $font-size-parrafo-md;
+        font-weight: $font-weight-semibold;
+
+        // Hover effect (subrayado)
+        &:hover {
+          text-decoration: underline;  // Subrayado en hover
+        }
+      }
+    }
+
+    .user-btn {
+      background-color: $blue-normal;  // Color de fondo del botón
+      color: $white;  // Color de texto del botón
+      padding: $spacing-sm $spacing-md;
+      font-size: $font-size-parrafo-md;
+      border: none;
+      border-radius: $border-radius-sm;
+      cursor: pointer;
+      font-family: $font-primary;
+
+      // Hover y Active states
+      &:hover, &:active {
+        background-color: $blue-dark;  // Se oscurece al hacer hover o clic
+      }
+    }
+  }
+
+  // ** Media Queries para el Header **
+
+  // Para móviles
+  @media (max-width: $breakpoint-mobile) {
+    .navbar {
+      flex-direction: column;
+      gap: $spacing-sm;
+
+      .nav-links {
+        flex-direction: column;
+        gap: $spacing-sm;
+
+        a {
+          font-size: $font-size-parrafo-sm;
+        }
+      }
+
+      .user-btn {
+        width: 100%;
+        font-size: $font-size-parrafo-sm;
+      }
+    }
+  }
+
+  // Para tablets
+  @media (min-width: $breakpoint-mobile) and (max-width: $breakpoint-tablet) {
+    .navbar {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    .nav-links {
+      flex-direction: row;
+    }
+  }
+
+  // Para escritorios pequeños
+  @media (min-width: $breakpoint-tablet) and (max-width: $breakpoint-desktop) {
+    .navbar {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    .nav-links {
+      flex-direction: row;
+    }
+  }
+
+  // Para escritorios grandes
+  @media (min-width: $breakpoint-desktop) and (max-width: $breakpoint-lg) {
+    .navbar {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    .nav-links {
+      flex-direction: row;
+    }
+  }
+
+  // Para pantallas extra grandes
+  @media (min-width: $breakpoint-lg) {
+    .navbar {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    .nav-links {
+      flex-direction: row;
+    }
+  }
+}

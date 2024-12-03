@@ -8,11 +8,17 @@
     "build": "vite build",
     "preview": "vite preview"
   },
-  "keywords": ["vite", "scss", "javascript", "responsive", "project"],
+  "keywords": [
+    "vite",
+    "scss",
+    "javascript",
+    "responsive",
+    "project"
+  ],
   "author": "Ignacio Ramos Martín",
   "license": "MIT",
   "devDependencies": {
-    "vite": "^4.0.0",
-    "sass": "^1.65.0"
+    "sass": "^1.81.1",
+    "vite": "^4.0.0"
   }
 }

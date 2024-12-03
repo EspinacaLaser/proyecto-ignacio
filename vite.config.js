@@ -1,36 +1,15 @@
 import { defineConfig } from "vite";
-import { resolve, dirname } from "path";
-import { fileURLToPath } from "url";
+import { resolve } from "path";
 
-// Configuración para __dirname
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
-
-export default defineConfig({
-  root: "./src", // Raíz del proyecto
+export default defineConfig ({
   build: {
-    outDir: "../docs", // Carpeta de salida
-    emptyOutDir: true, // Vaciar docs antes de construir
+    root: "./src", //cambia la raiz del proyecto a src
+    outDir: "./docs", // Cambia el directorio de salida
     rollupOptions: {
       input: {
-        main: resolve(__dirname, "./src/index.html"), // Página principal
+        main: resolve("src", "index.html"),
       },
     },
-  },
-  resolve: {
-    alias: {
-      "@": resolve(__dirname, "./src"), // Alias para simplificar rutas
     },
-  },
-  css: {
-    preprocessorOptions: {
-      scss: {
-        additionalData: `
-          @import "@/styles/base/variables.scss";
-          @import "@/styles/base/mixins.scss";
-        `,
-      },
-    },
-  },
-  base: "./",
+    base: "./",
 });

@@ -1,9 +1,4 @@
-// Importar las variables, mixins, y estilos base primero
-@use "@/styles/base/variables.scss";
-@use "@/styles/base/mixins.scss";
-@use "@/styles/base/globals.scss";
-
-// Importar los estilos específicos de layout
-@use "@/styles/layout/header.scss";
-@use "@/styles/layout/footer.scss";
-@use "@/styles/layout/layout.scss"; // Si tienes un archivo layout.scss para la estructura general
+@use "/src/styles/base/variables"; // Variables globales
+@use "/src/styles/base/globals";   // Estilos globales
+@use "/src/styles/layout/header";  // Estilos del header
+@use "/src/styles/layout/footer";  // Estilos del footer
