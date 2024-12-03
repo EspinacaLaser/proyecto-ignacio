@@ -39,9 +39,9 @@
     }
   
     .card-img {
-      width: 100%; /* Asegura que las imágenes ocupen todo el ancho de la card */
+      width: 100%; 
       height: auto;
-      border-radius: $border-radius; // Redondear las esquinas de la imagen
+      border-radius: $border-radius; 
     }
   
     .card-body {

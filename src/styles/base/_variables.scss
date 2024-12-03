@@ -1,137 +1,102 @@
-// ** Variables de color **
-@use 'sass:color';
-// Morado
-$purple-dark: #4C1D95;  // Tono oscuro de morado
-$purple-normal: #8B5CF6; // Tono normal de morado
-$purple-light: #D8B4FE;  // Tono claro de morado
-
-// Azul
-$blue-dark: #1E3A8A;    // Tono oscuro de azul
-$blue-normal: #3B82F6;  // Tono normal de azul
-$blue-light: #93C5FD;   // Tono claro de azul
-
-// Gris
-$gray-dark: #4B5563;    // Gris oscuro
-$gray-normal: #6B7280;  // Gris normal
-$gray-light: #D1D5DB;   // Gris claro
-
-// Colores auxiliares
-$success-green: #10B981; // Verde de éxito
-$warning-yellow: #F59E0B; // Amarillo de advertencia
-$danger-red: #DC2626;    // Rojo de peligro
-
-// Blanco y Negro
-$white: #FFFFFF;   // Blanco
-$black: #000000;   // Negro
-
-// ** Estado Hover / Active **
+@use 'sass:color'; //lo uso para los hover, focus y active de los botones
+//variables de color
+$purple-dark: #4C1D95;
+$purple-normal: #8B5CF6;
+$purple-light: #D8B4FE;
+$blue-dark: #1E3A8A;
+$blue-normal: #3B82F6;
+$blue-light: #93C5FD;
+$gray-dark: #4B5563;
+$gray-normal: #6B7280;
+$gray-light: #D1D5DB;
+$success-green: #10B981;
+$warning-yellow: #F59E0B;
+$danger-red: #DC2626;    
+$white: #FFFFFF;
+$black: #000000;
+//reglas para el hover, focus y active
 $color-hover: color.adjust($purple-normal, $lightness: 10%);
 $color-focus: color.adjust($blue-normal, $lightness: 5%);
 $color-active: color.adjust($gray-normal, $lightness: 10%);
-
-
-// Fuentes recomendadas
-$font-primary: 'Poppins', sans-serif;  // Fuente principal (moderna y versátil)
-$font-secondary: 'Roboto', sans-serif; // Fuente secundaria (moderna y legible)
-
-// Tamaños de fuente
-$font-size-h1: 3rem;      // Título principal
-$font-size-h2: 2.25rem;   // Título secundario
-$font-size-h3: 1.75rem;   // Título terciario
-$font-size-parrafo-lg: 1.125rem;  // Párrafo grande
-$font-size-parrafo-md: 1rem;      // Párrafo mediano
-$font-size-parrafo-sm: 0.875rem;  // Párrafo pequeño
-
-// Font-weight
-$font-weight-light: 300;  // Peso ligero de fuente
-$font-weight-normal: 400; // Peso normal de fuente
-$font-weight-semibold: 600; // Peso semi-negrita
-$font-weight-bold: 700;   // Peso negrita
-
-// Line-height (espaciado entre líneas)
+//___________________________________________________________________
+//fonts
+$font-primary: 'Poppins', sans-serif;  //main font
+$font-secondary: 'Roboto', sans-serif; //aux font
+//tamaños de fuente
+$font-size-h1: 3rem;
+$font-size-h2: 2.25rem;
+$font-size-h3: 1.75rem;
+$font-size-parrafo-lg: 1.125rem;
+$font-size-parrafo-md: 1rem;
+$font-size-parrafo-sm: 0.875rem;
+//weight
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-semibold: 600;
+$font-weight-bold: 700; //negrita prácticamente
+//height (espaciado entre líneas)
 $line-height-h1: 1.2;
 $line-height-h2: 1.3;
 $line-height-h3: 1.3;
-$line-height-parrafo: 1.5;  // Mejor legibilidad en párrafos
-
-// Otras variables de tipografía
-$letter-spacing-h1: 0.5px;  // Espaciado de letras en títulos principales
-$letter-spacing-h2: 0.2px;  // Espaciado de letras en títulos secundarios
-
-// ** Espaciado (márgenes y paddings) **
-$spacing-xs: 0.5rem;  // Espaciado pequeño
-$spacing-sm: 1rem;    // Espaciado mediano
-$spacing-md: 1.5rem;  // Espaciado medio
-$spacing-lg: 2rem;    // Espaciado grande
-$spacing-xl: 3rem;    // Espaciado extra grande
-
-// ** Márgenes y Paddings (Usa esta escala según el contexto) **
-$margin-xs: $spacing-xs;
-$margin-sm: $spacing-sm;
-$margin-md: $spacing-md;
-$margin-lg: $spacing-lg;
+$line-height-parrafo: 1.5;  //mejor legibilidad en párrafos
+//otras
+$letter-spacing-h1: 0.5px;
+$letter-spacing-h2: 0.2px;
+//___________________________________________________________________
+//spacings, margins y paddings
+$spacing-xl: 3rem;
+$spacing-lg: 2rem;
+$spacing-md: 1.5rem;
+$spacing-sm: 1rem;
+$spacing-xs: 0.5rem;
 $margin-xl: $spacing-xl;
-
-$padding-xs: $spacing-xs;
-$padding-sm: $spacing-sm;
-$padding-md: $spacing-md;
-$padding-lg: $spacing-lg;
+$margin-lg: $spacing-lg;
+$margin-md: $spacing-md;
+$margin-sm: $spacing-sm;
+$margin-xs: $spacing-xs;
 $padding-xl: $spacing-xl;
+$padding-lg: $spacing-lg;
+$padding-md: $spacing-md;
+$padding-sm: $spacing-sm;
+$padding-xs: $spacing-xs;
+//max-width para la responsibidad (desde pantalla grande a movil)
+$max-width-xl: 1280px;
+$max-width-lg: 1024px;
+$max-width-md: 768px;
+$max-width-sm: 540px;
+$max-width-xs: 100%; //100% para móvil
+//breakpoints para la responsividad
+$breakpoint-xl: 1400px;
+$breakpoint-lg: 1200px;
+$breakpoint-desktop: 1024px;
+$breakpoint-tablet: 768px;
+$breakpoint-mobile: 480px;
+//___________________________________________________________________
+//estructura del grid basico
+$grid-columns: 12; 
+$grid-gutter: 1rem; //espacio entre columnas
+$grid-align-items: center;
+$grid-justify-items: center;
+//estrcutura de grid responsivo (desde pantalla grande a movil)
+$grid-columns-xl: 16;
+$grid-gutter-xl: 2rem;
 
-// ** Anchura máxima (para contener el contenido en dispositivos grandes) **
-$max-width-xs: 100%;           // Dispositivos pequeños (por ejemplo, móviles)
-$max-width-sm: 540px;          // Dispositivos medianos (tablets)
-$max-width-md: 768px;          // Dispositivos medianos (tablets grandes)
-$max-width-lg: 1024px;         // Dispositivos grandes (escritorios)
-$max-width-xl: 1280px;         // Dispositivos extra grandes (pantallas grandes)
+$grid-columns-lg: 12;
+$grid-gutter-lg: 2rem;
 
-// ** Breakpoints para responsividad **
-$breakpoint-mobile: 480px;     // Móviles
-$breakpoint-tablet: 768px;     // Tabletas
-$breakpoint-desktop: 1024px;   // Escritorios pequeños
-$breakpoint-lg: 1200px;        // Escritorios grandes
-$breakpoint-xl: 1400px;        // Pantallas extra grandes
+$grid-columns-desktop: 10;
+$grid-gutter-desktop: 1.5rem;
 
-// ** Grid (Estructura general) **
+$grid-columns-tablet: 8;
+$grid-gutter-tablet: 1rem;
 
-// Número de columnas del grid
-$grid-columns: 12; // Número estándar de columnas en el grid
-
-// Espaciado entre columnas (gutter)
-$grid-gutter: 1rem; // Espacio entre las columnas del grid
-
-// Alineación de los elementos en el grid
-$grid-align-items: center; // Alineación vertical de los elementos en el grid
-$grid-justify-items: center; // Alineación horizontal de los elementos en el grid
-
-// ** Grid Responsivo (para dispositivos de diferentes tamaños) **
-
-// Para móviles (pantallas más pequeñas)
-$grid-columns-mobile: 4; // 4 columnas en móvil
-$grid-gutter-mobile: 0.5rem; // Gutter más pequeño para pantallas móviles
-
-// Para tablets
-$grid-columns-tablet: 8; // 8 columnas en tabletas
-$grid-gutter-tablet: 1rem; // Gutter estándar para tabletas
-
-// Para escritorios pequeños
-$grid-columns-desktop: 10; // 10 columnas en escritorio pequeño
-$grid-gutter-desktop: 1.5rem; // Gutter mayor para pantallas más grandes
-
-// Para escritorios grandes
-$grid-columns-lg: 12; // 12 columnas en pantallas grandes
-$grid-gutter-lg: 2rem; // Gutter mayor para pantallas más grandes
-
-// Para pantallas extra grandes
-$grid-columns-xl: 16; // 16 columnas en pantallas extra grandes
-$grid-gutter-xl: 2rem; // Gutter aún mayor para pantallas muy grandes
-
-// ** Border Radius **
+$grid-columns-mobile: 4;
+$grid-gutter-mobile: 0.5rem;
+//___________________________________________________________________
+//bordes y shadows
 $border-radius-sm: 4px;
 $border-radius-md: 8px;
 $border-radius-lg: 16px;
-
-// ** Box Shadows **
 $shadow-light: 0 2px 4px rgba(0, 0, 0, 0.1);
 $shadow-md: 0 4px 8px rgba(0, 0, 0, 0.2);
 $shadow-dark: 0 6px 12px rgba(0, 0, 0, 0.3);
