@@ -1,5 +1,5 @@
 //Header SCSS haciendo uso de mis variables
-@use "/src/styles/base/variables" as *; //lo importo como global (as *) para así no poner ningún prefijo a las variables
+@use "/src/styles/base/globals" as *;
 
 //general
 header {

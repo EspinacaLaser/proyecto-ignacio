@@ -1,4 +1,4 @@
 @use "/src/styles/base/variables"; // Variables globales
-@use "/src/styles/base/globals";   // Estilos globales
+@use "/src/styles/base/globals" as *;   // Estilos globales
 @use "/src/styles/layout/header";  // Estilos del header
 @use "/src/styles/layout/footer";  // Estilos del footer
