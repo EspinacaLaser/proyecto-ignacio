@@ -31,10 +31,8 @@
     box-shadow: $shadow;
     padding: 20px;
     text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
   
     &:hover {
-      transform: translateY(-5px);
       box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     }
   
@@ -61,7 +59,6 @@
         text-decoration: none;
         font-family: $font-family-sans;
         font-size: $font-size-p-sm;
-        transition: background-color 0.3s;
   
         &:hover {
           background-color: $blue-light;

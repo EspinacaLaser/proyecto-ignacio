@@ -1,18 +1,16 @@
-// ** Header SCSS **
+//Header SCSS haciendo uso de mis variables
+@use "/src/styles/base/variables" as *; //lo importo como global (as *) para así no poner ningún prefijo a las variables
 
-// Asegúrate de importar las variables y fuentes antes de cualquier estilo
-@use "/src/styles/base/variables" as *; // Solo lo necesario, evita usar `main.scss`
-
-// Estilos generales del header
+//general
 header {
-  background-color: $purple-normal; // Color de fondo del header (morado)
-  padding: $spacing-md, $spacing-lg;  // Padding según las variables
+  background-color: $purple-normal;
+  padding: $spacing-md, $spacing-lg;
 
   .logo {
     display: block;
-    max-width: 120px;  // Tamaño del logo
+    max-width: 120px;
     height: auto;
-    border-radius: $border-radius-md;  // Border radius para el logo
+    border-radius: $border-radius-md;
   }
 
   .navbar {
@@ -27,21 +25,20 @@ header {
 
       a {
         text-decoration: none;
-        color: $white;  // Color del enlace
+        color: $white;
         font-family: $font-primary;
         font-size: $font-size-parrafo-md;
         font-weight: $font-weight-semibold;
 
-        // Hover effect (subrayado)
         &:hover {
-          text-decoration: underline;  // Subrayado en hover
+          text-decoration: underline;
         }
       }
     }
 
     .user-btn {
-      background-color: $blue-normal;  // Color de fondo del botón
-      color: $white;  // Color de texto del botón
+      background-color: $blue-normal;
+      color: $white;
       padding: $spacing-sm $spacing-md;
       font-size: $font-size-parrafo-md;
       border: none;
@@ -49,14 +46,13 @@ header {
       cursor: pointer;
       font-family: $font-primary;
 
-      // Hover y Active states
       &:hover, &:active {
-        background-color: $blue-dark;  // Se oscurece al hacer hover o clic
+        background-color: $blue-dark; //oscurece el boton al hacer hover o clic
       }
     }
   }
 
-  // ** Media Queries para el Header **
+  //medias
 
   // Para móviles
   @media (max-width: $breakpoint-mobile) {
